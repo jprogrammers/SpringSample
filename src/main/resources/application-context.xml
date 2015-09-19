@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-       <bean id="myBean" class="com.jprogrammers.spring.SimpleBean">
+       <context:annotation-config/>
+       <bean class="com.jprogrammers.spring.config.Configuration" />
+
+       <bean id="myXmlBean" class="com.jprogrammers.spring.SimpleBean">
               <property name="name" value="Jprogrammers" />
        </bean>
 </beans>
